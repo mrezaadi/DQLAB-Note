@@ -1,0 +1,44 @@
+Pemrograman Berbasis Objek (Object Oriented Programming - OOP) merupakan
+salah satu paradigma pemrograman yang cukup populer di antara paradigma-paradigma lainnya.
+
+Pada paradigma OOP, struktur dari sebuah program dikemas ke dalam sebuah 
+objek yang memiliki serangkaian properti (properties) dan fungsi (behaviours).
+
+Contoh, karyawan ke dalam sebuah program melalui konsep OOP.
+Seorang karyawan dapat memiliki serangkaian properti seperti nama, usia, keahlian, dll. 
+Kemudian, seorang karyawan juga dapat memiliki fungsi-fungsi seperti hadir ke kantor, absen, lembur, tugas dinas, dll.
+
+Dalam bahasa pemrograman Python, terdapat 3 konsep utama OO yaitu.
+Encapsulation: Menyembunyikan sebagian detail yang dimiliki oleh sebuah objek terhadap objek-objek lainnya.
+Inheritance: Menurunkan serangkaian fungsi-fungsi yang dimiliki oleh sebuah objek ke sebuah objek baru tanpa mengubah makna dari objek acuan yang digunakan.
+Polymorphism: Konsep untuk menggunakan fungsi-fungsi dengan nama/ tujuan yang sama dengan cara yang berbeda.
+
+Setiap objek yang aku representasikan dalam program berbasis OOP merupakan instansi/ bentuk nyata dari sebuah konsep yang disebut dengan class. 
+Oleh karena itu, class dapat juga aku sebutkan sebagai kerangka utama (blueprint) dari objek.
+
+Class Attribute adalah properti/atribut yang bernilai sama untuk oleh seluruh objek dari sebuah
+Instance Attribute adalah properti/atribut yang nilainya berbeda-beda untuk setiap objek dari sebuah class.
+
+Sebagai tambahan, fungsi __init__() di dalam class Karyawan secara khusus disebut sebagai constructor. 
+Melalui sebuah constructor, aku dapat meng-assign (menginisialisasi) atribut-atribut milik sebuah objek.
+Pada bahasa pemrograman Python, setiap fungsi (termasuk constructor) akan menerima dirinya sendiri (self) sebagai parameter pertama dari fungsi. 
+Kemudian, aku dapat menambahkan parameter-parameter lain setelah parameter self sesuai dengan kebutuhan. 
+
+Terdapat 2 macam access modifier dalam Python, yakni.
+Public access: dapat aku definisikan dengan secara langsung menuliskan nama dari atribut/ fungsi. 
+Dalam sebuah objek, atribut/fungsi yang bersifat public access dapat diakses di luar scope sebuah class
+Private access: dapat aku definisikan dengan menambahkan double underscore (__) sebelum menuliskan nama dari atribut/fungsi. 
+Dalam sebuah objek, atribut/fungsi yang bersifat private access hanya dapat diakses di dalam scope sebuah class.
+
+Melalui konsep inheritance, sebuah class baru dapat memiliki atribut dan fungsi pada class yang sebelumnya telah didefinisikan. 
+Pada konsep inheritance, atribut/fungsi yang akan diwariskan hanyalah atribut/fungsi dengan access modifier public, 
+atribut/fungsi dengan access modifier private tidak akan diturunkan.
+
+Suatu child class dapat mengakses atribut ataupun fungsi yang dimiliki oleh parent class dengan menggunakan fungsi super(). Pada contoh di atas, fungsi super() digunakan oleh child class (AnalisData dan IlmuwanData) untuk mengakses constructor yang dimiliki oleh parent class (Karyawan).
+
+Catatan: Sebenarnya, aku tidak perlu mendefinisikan kembali fungsi (termasuk constructor) ataupun properti yang memiliki public access modifier di sebuah child class. 
+Python akan secara otomatis mewariskan seluruh fungsi dan properti dengan public access modifier ke sebuah child class. 
+Contoh potongan kode di atas hanya diperkenankan untuk mencontohkan penggunaan fungsi super().
+Melalui konsep inheritance, child class dapat memodifikasi atribut/ fungsi yang diwarisi oleh sebuah parent class dengan mendefinisikan ulang atribut/ fungsi menggunakan nama yang sama. 
+
+Untuk mengimplementasikan method overloading pada Python, aku dapat menggunakan sebuah teknik yang dikenal dengan function default parameters.
